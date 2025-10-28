@@ -20,7 +20,7 @@ def add(op_1, op_2):
     try:
         num_1, num_2 = util.convert_to_number(op_1), util.convert_to_number(op_2)
         return ("{}".format(CALCULATOR.add(num_1, num_2)), http.client.OK, HEADERS)
-    except TypeError as e:
+    except (TypeError, ValueError) as e:
         return (str(e), http.client.BAD_REQUEST, HEADERS)
 
 
@@ -29,5 +29,56 @@ def substract(op_1, op_2):
     try:
         num_1, num_2 = util.convert_to_number(op_1), util.convert_to_number(op_2)
         return ("{}".format(CALCULATOR.substract(num_1, num_2)), http.client.OK, HEADERS)
-    except TypeError as e:
+    except (TypeError, ValueError) as e:
+        return (str(e), http.client.BAD_REQUEST, HEADERS)
+
+
+@api_application.route("/calc/multiply/<op_1>/<op_2>", methods=["GET"])
+def multiply(op_1, op_2):
+    try:
+        num_1, num_2 = util.convert_to_number(op_1), util.convert_to_number(op_2)
+        return ("{}".format(CALCULATOR.multiply(num_1, num_2)), http.client.OK, HEADERS)
+    except (TypeError, ValueError) as e:
+        return (str(e), http.client.BAD_REQUEST, HEADERS)
+
+    
+@api_application.route("/calc/divide/<op_1>/<op_2>", methods=["GET"])
+def divide(op_1, op_2):
+    try:
+        num_1, num_2 = util.convert_to_number(op_1), util.convert_to_number(op_2)
+        if num_2 == 0:
+            return ("Division by zero is not possible", http.client.BAD_REQUEST, HEADERS)
+        return ("{}".format(CALCULATOR.divide(num_1, num_2)), http.client.OK, HEADERS)
+    except (TypeError, ValueError) as e:
+        return (str(e), http.client.BAD_REQUEST, HEADERS)
+
+    
+@api_application.route("/calc/power/<op_1>/<op_2>", methods=["GET"])
+def power(op_1, op_2):
+    try:
+        num_1, num_2 = util.convert_to_number(op_1), util.convert_to_number(op_2)
+        return ("{}".format(CALCULATOR.power(num_1, num_2)), http.client.OK, HEADERS)
+    except (TypeError, ValueError, OverflowError) as e:
+        return (str(e), http.client.BAD_REQUEST, HEADERS)
+
+    
+@api_application.route("/calc/square_root/<op_1>", methods=["GET"])
+def square_root(op_1):
+    try:
+        num_1 = util.convert_to_number(op_1)
+        if num_1 < 0:
+            return ("Cannot calculate square root of negative number", http.client.BAD_REQUEST, HEADERS)
+        return ("{}".format(CALCULATOR.square_root(num_1)), http.client.OK, HEADERS)
+    except (TypeError, ValueError) as e:
+        return (str(e), http.client.BAD_REQUEST, HEADERS)
+
+    
+@api_application.route("/calc/log10/<op_1>", methods=["GET"])
+def log10(op_1):
+    try:
+        num_1 = util.convert_to_number(op_1)
+        if num_1 <= 0:
+            return ("Cannot calculate logarithm of zero or negative number", http.client.BAD_REQUEST, HEADERS)
+        return ("{}".format(CALCULATOR.log10(num_1)), http.client.OK, HEADERS)
+    except (TypeError, ValueError) as e:
         return (str(e), http.client.BAD_REQUEST, HEADERS)
