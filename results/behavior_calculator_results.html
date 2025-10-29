@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>behavior_calculator_results.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : behavior_calculator_results.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>features.calculator.Calculator basic usage
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#dc55e0cd-6202-4917-a515-aea026245137">Use the add operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#81817910-f080-450d-99d0-0fcaa84b308a">Use the add operation multiple times -- @1.1 Add numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#5eab1a1c-12d1-4821-85e6-67be9d38eadd">Use the add operation multiple times -- @1.2 Add numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#074ada69-01eb-4e29-a4af-f3f700ca54e8">Use the add operation multiple times -- @1.3 Add numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8b3bd06a-1ba4-471d-8de3-d85905507d03">Use the add operation multiple times -- @1.4 Add numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#ea91cbb8-894c-465d-a362-6eb4818cd377">Use the substract operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1b17847c-9404-4feb-937e-3ff34370967b">Use the substract operation multiple times -- @1.1 Substract numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fdaaeade-bd68-4fa4-9bd3-610622977493">Use the substract operation multiple times -- @1.2 Substract numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#be244089-825c-4e24-9212-f314750a8a6b">Use the substract operation multiple times -- @1.3 Substract numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1109ead4-351e-4449-b2dc-c85ccf4b89cf">Use the substract operation multiple times -- @1.4 Substract numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#28ea9c59-0443-4d01-a95a-e821296e8b8c">Use the multiply operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#c19fd65e-3b66-4671-bf79-d2c839b2814e">Use the multiply operation multiple times -- @1.1 Multiply numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e173ece9-6d33-4913-a14c-1c32dade27b3">Use the multiply operation multiple times -- @1.2 Multiply numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#40b03823-603b-4eeb-a3e6-ee30ab99d6c5">Use the multiply operation multiple times -- @1.3 Multiply numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b7ec5d8d-1c59-4f4c-9ef2-3dd8c59c1863">Use the multiply operation multiple times -- @1.4 Multiply numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#f38b72e5-762e-4350-b937-11043b693ac9">Use the divide operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#5844a338-311c-49d1-8d58-361f14aa505d">Use the divide operation multiple times -- @1.1 Divide numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#75fc1031-90f5-4471-b3a8-f7b6e399e1b3">Use the divide operation multiple times -- @1.2 Divide numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fb58ce4c-790d-451c-971c-4e2acc7b5401">Use the divide operation multiple times -- @1.3 Divide numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e4bff049-618c-470f-a82f-5d3871b6bd74">Use the divide operation multiple times -- @1.4 Divide numbers</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#368717c8-c1a6-4dae-9690-8240259e68e2">Use the power operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#4df6aaa1-8e4f-47af-9956-20c7c9b768db">Use the power operation multiple times -- @1.1 Power calculations</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#53acdc74-9272-4af6-9239-1a4141aa6a03">Use the power operation multiple times -- @1.2 Power calculations</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e4b510d2-8d92-4c03-ab65-87658b56674c">Use the power operation multiple times -- @1.3 Power calculations</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8a8b805c-d2c1-422c-9c60-768c415a443b">Use the power operation multiple times -- @1.4 Power calculations</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0cdbc375-1acf-4af7-9319-c139e920dc78">Use the square root operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#485b0beb-59ed-4fd1-9c2d-74593795d5c0">Use the square root operation multiple times -- @1.1 Square roots</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#55dc11c6-a4e7-4abe-9633-f93aa7e2379d">Use the square root operation multiple times -- @1.2 Square roots</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#7a7957df-422f-46a7-9ec0-f326998d98e8">Use the square root operation multiple times -- @1.3 Square roots</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#74838556-341d-46eb-80ba-05a12191f379">Use the square root operation multiple times -- @1.4 Square roots</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#012e795e-66dc-40eb-b715-b35d4b991f2d">Use the logarithm base 10 operation</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#04853bab-5804-4d9a-8731-b20aa69be8e3">Use the logarithm base 10 operation multiple times -- @1.1 Logarithms base 10</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#6fca7589-2ffb-4e47-99a2-4741b546bd24">Use the logarithm base 10 operation multiple times -- @1.2 Logarithms base 10</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1b5d0bac-bc6f-4a22-859f-ff7f1def55a6">Use the logarithm base 10 operation multiple times -- @1.3 Logarithms base 10</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#15a22915-cac5-494f-83e2-c3d7d8fb2af4">Use the logarithm base 10 operation multiple times -- @1.4 Logarithms base 10</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: features.calculator.Calculator basic usage</h2>
+        <a id="7096ca3f-a503-40a2-a73b-c5bcfbfe5473"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.009 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>35</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>features.calculator.Calculator basic usage</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="dc55e0cd-6202-4917-a515-aea026245137"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the add operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the add operation
+    Given I open the calculator ... passed in 0.000s
+    When I type 2 + 2 ... passed in 0.000s
+    Then the result is 4 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="81817910-f080-450d-99d0-0fcaa84b308a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the add operation multiple times -- @1.1 Add numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the add operation multiple times -- @1.1 Add numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 2 + 2 ... passed in 0.000s
+    Then the result is 4 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5eab1a1c-12d1-4821-85e6-67be9d38eadd"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the add operation multiple times -- @1.2 Add numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the add operation multiple times -- @1.2 Add numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 1 + 0 ... passed in 0.000s
+    Then the result is 1 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="074ada69-01eb-4e29-a4af-f3f700ca54e8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the add operation multiple times -- @1.3 Add numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the add operation multiple times -- @1.3 Add numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 1 + -1 ... passed in 0.000s
+    Then the result is 0 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8b3bd06a-1ba4-471d-8de3-d85905507d03"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the add operation multiple times -- @1.4 Add numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the add operation multiple times -- @1.4 Add numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 5 + 3 ... passed in 0.000s
+    Then the result is 8 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ea91cbb8-894c-465d-a362-6eb4818cd377"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the substract operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the substract operation
+    Given I open the calculator ... passed in 0.000s
+    When I type 10 - 3 ... passed in 0.000s
+    Then the result is 7 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1b17847c-9404-4feb-937e-3ff34370967b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the substract operation multiple times -- @1.1 Substract numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the substract operation multiple times -- @1.1 Substract numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 10 - 3 ... passed in 0.000s
+    Then the result is 7 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fdaaeade-bd68-4fa4-9bd3-610622977493"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the substract operation multiple times -- @1.2 Substract numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the substract operation multiple times -- @1.2 Substract numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 5 - 0 ... passed in 0.000s
+    Then the result is 5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="be244089-825c-4e24-9212-f314750a8a6b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the substract operation multiple times -- @1.3 Substract numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the substract operation multiple times -- @1.3 Substract numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 3 - 10 ... passed in 0.000s
+    Then the result is -7 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1109ead4-351e-4449-b2dc-c85ccf4b89cf"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the substract operation multiple times -- @1.4 Substract numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the substract operation multiple times -- @1.4 Substract numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 0 - 5 ... passed in 0.000s
+    Then the result is -5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="28ea9c59-0443-4d01-a95a-e821296e8b8c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the multiply operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the multiply operation
+    Given I open the calculator ... passed in 0.000s
+    When I type 4 * 5 ... passed in 0.000s
+    Then the result is 20 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c19fd65e-3b66-4671-bf79-d2c839b2814e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the multiply operation multiple times -- @1.1 Multiply numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the multiply operation multiple times -- @1.1 Multiply numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 4 * 5 ... passed in 0.000s
+    Then the result is 20 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e173ece9-6d33-4913-a14c-1c32dade27b3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the multiply operation multiple times -- @1.2 Multiply numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the multiply operation multiple times -- @1.2 Multiply numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 7 * 0 ... passed in 0.000s
+    Then the result is 0 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="40b03823-603b-4eeb-a3e6-ee30ab99d6c5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the multiply operation multiple times -- @1.3 Multiply numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the multiply operation multiple times -- @1.3 Multiply numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type -3 * 4 ... passed in 0.000s
+    Then the result is -12 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b7ec5d8d-1c59-4f4c-9ef2-3dd8c59c1863"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the multiply operation multiple times -- @1.4 Multiply numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the multiply operation multiple times -- @1.4 Multiply numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 3 * 3 ... passed in 0.000s
+    Then the result is 9 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f38b72e5-762e-4350-b937-11043b693ac9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the divide operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the divide operation
+    Given I open the calculator ... passed in 0.000s
+    When I type 10 / 2 ... passed in 0.000s
+    Then the result is 5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5844a338-311c-49d1-8d58-361f14aa505d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the divide operation multiple times -- @1.1 Divide numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the divide operation multiple times -- @1.1 Divide numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 10 / 2 ... passed in 0.000s
+    Then the result is 5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="75fc1031-90f5-4471-b3a8-f7b6e399e1b3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the divide operation multiple times -- @1.2 Divide numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the divide operation multiple times -- @1.2 Divide numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 10 / 4 ... passed in 0.000s
+    Then the result is 2.5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fb58ce4c-790d-451c-971c-4e2acc7b5401"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the divide operation multiple times -- @1.3 Divide numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the divide operation multiple times -- @1.3 Divide numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type -10 / 2 ... passed in 0.000s
+    Then the result is -5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e4bff049-618c-470f-a82f-5d3871b6bd74"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the divide operation multiple times -- @1.4 Divide numbers</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the divide operation multiple times -- @1.4 Divide numbers
+    Given I open the calculator ... passed in 0.000s
+    When I type 20 / 5 ... passed in 0.000s
+    Then the result is 4 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="368717c8-c1a6-4dae-9690-8240259e68e2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the power operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the power operation
+    Given I open the calculator ... passed in 0.000s
+    When I type 2 ^ 3 ... passed in 0.000s
+    Then the result is 8 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4df6aaa1-8e4f-47af-9956-20c7c9b768db"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the power operation multiple times -- @1.1 Power calculations</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the power operation multiple times -- @1.1 Power calculations
+    Given I open the calculator ... passed in 0.000s
+    When I type 2 ^ 3 ... passed in 0.000s
+    Then the result is 8 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="53acdc74-9272-4af6-9239-1a4141aa6a03"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the power operation multiple times -- @1.2 Power calculations</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the power operation multiple times -- @1.2 Power calculations
+    Given I open the calculator ... passed in 0.000s
+    When I type 5 ^ 0 ... passed in 0.000s
+    Then the result is 1 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e4b510d2-8d92-4c03-ab65-87658b56674c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the power operation multiple times -- @1.3 Power calculations</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the power operation multiple times -- @1.3 Power calculations
+    Given I open the calculator ... passed in 0.000s
+    When I type 2 ^ -1 ... passed in 0.000s
+    Then the result is 0.5 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8a8b805c-d2c1-422c-9c60-768c415a443b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the power operation multiple times -- @1.4 Power calculations</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the power operation multiple times -- @1.4 Power calculations
+    Given I open the calculator ... passed in 0.000s
+    When I type 3 ^ 2 ... passed in 0.000s
+    Then the result is 9 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0cdbc375-1acf-4af7-9319-c139e920dc78"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the square root operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the square root operation
+    Given I open the calculator ... passed in 0.000s
+    When I type sqrt(16) ... passed in 0.000s
+    Then the result is 4 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="485b0beb-59ed-4fd1-9c2d-74593795d5c0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the square root operation multiple times -- @1.1 Square roots</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the square root operation multiple times -- @1.1 Square roots
+    Given I open the calculator ... passed in 0.000s
+    When I type sqrt(16) ... passed in 0.000s
+    Then the result is 4 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="55dc11c6-a4e7-4abe-9633-f93aa7e2379d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the square root operation multiple times -- @1.2 Square roots</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the square root operation multiple times -- @1.2 Square roots
+    Given I open the calculator ... passed in 0.000s
+    When I type sqrt(9) ... passed in 0.000s
+    Then the result is 3 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7a7957df-422f-46a7-9ec0-f326998d98e8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the square root operation multiple times -- @1.3 Square roots</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the square root operation multiple times -- @1.3 Square roots
+    Given I open the calculator ... passed in 0.000s
+    When I type sqrt(0) ... passed in 0.000s
+    Then the result is 0 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="74838556-341d-46eb-80ba-05a12191f379"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the square root operation multiple times -- @1.4 Square roots</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the square root operation multiple times -- @1.4 Square roots
+    Given I open the calculator ... passed in 0.000s
+    When I type sqrt(4) ... passed in 0.000s
+    Then the result is 2 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="012e795e-66dc-40eb-b715-b35d4b991f2d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the logarithm base 10 operation</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Use the logarithm base 10 operation
+    Given I open the calculator ... passed in 0.000s
+    When I type log10(10) ... passed in 0.000s
+    Then the result is 1 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="04853bab-5804-4d9a-8731-b20aa69be8e3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the logarithm base 10 operation multiple times -- @1.1 Logarithms base 10</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the logarithm base 10 operation multiple times -- @1.1 Logarithms base 10
+    Given I open the calculator ... passed in 0.000s
+    When I type log10(10) ... passed in 0.000s
+    Then the result is 1 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6fca7589-2ffb-4e47-99a2-4741b546bd24"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the logarithm base 10 operation multiple times -- @1.2 Logarithms base 10</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the logarithm base 10 operation multiple times -- @1.2 Logarithms base 10
+    Given I open the calculator ... passed in 0.000s
+    When I type log10(100) ... passed in 0.000s
+    Then the result is 2 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1b5d0bac-bc6f-4a22-859f-ff7f1def55a6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the logarithm base 10 operation multiple times -- @1.3 Logarithms base 10</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the logarithm base 10 operation multiple times -- @1.3 Logarithms base 10
+    Given I open the calculator ... passed in 0.000s
+    When I type log10(1) ... passed in 0.000s
+    Then the result is 0 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="15a22915-cac5-494f-83e2-c3d7d8fb2af4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Use the logarithm base 10 operation multiple times -- @1.4 Logarithms base 10</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario Outline: Use the logarithm base 10 operation multiple times -- @1.4 Logarithms base 10
+    Given I open the calculator ... passed in 0.000s
+    When I type log10(1000) ... passed in 0.000s
+    Then the result is 3 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
