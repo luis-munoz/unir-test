@@ -8,7 +8,7 @@ def convert_to_number(operand):
 
     except ValueError:
         raise TypeError("Operator cannot be converted to number")
-
+"""
 #Actualmente no utilizada
 def InvalidConvertToNumber(operand):
     try:
@@ -24,3 +24,4 @@ def InvalidConvertToNumber(operand):
 def validate_permissions(operation, user):
     print(f"checking permissions of {user} for operation {operation}")
     return user == "user1"
+"""
